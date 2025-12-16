@@ -50,12 +50,12 @@
                 background-color: theme('colors.page'); 
                 color: theme('colors.txt.main');
                 font-family: 'Inter', sans-serif;
-                /* The top atmospheric glow */
+                /* top atmospheric glow */
                 background-image: radial-gradient(circle at 50% 0%, rgba(120, 119, 198, 0.10) 0%, transparent 50%);
                 min-height: 100vh;
             }
 
-            /* Glassmorphism Utility Class */
+            /* glassmorphism utility class */
             .glass-panel {
                 background-color: theme('colors.card');
                 backdrop-filter: blur(12px);
@@ -72,5 +72,36 @@
         </style>
     </head>
     <body class="selection:bg-indigo-500/30 selection:text-white">
+            <div class="fixed inset-0 z-[-1] opacity-20" 
+                style="background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px);
+                    background-size: 30px 30px;
+                    mask-image: radial-gradient(circle, black 30%, transparent 70%);">
+            </div>
+
+            <div class="max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col items-center relative">
+
+                <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-purple-600/20 blur-[100px] rounded-full pointer-events-none"></div>
+
+                <div class="relative z-10 text-center animate-fade-in">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-purple-300 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+                        Available for new projects
+                    </div>
+
+                    <h1 class="text-5xl md:text-7xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/60 mb-6">
+                        Engineered for<br>Performance.
+                    </h1>
+
+                    <p class="text-txt-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                        I build scalable backend systems that power modern businesses. <br>
+                        PHP 8.2 • Symfony • High-Performance Architecture.
+                    </p>
+                </div>
+
+                <main class="w-full grid grid-cols-1 md:grid-cols-6 gap-6 mt-20 animate-fade-in" style="animation-delay: 0.1s;">
+                </main>
+
+                <div id="modal-container"></div>
+            </div>
     </body>
 </html>
